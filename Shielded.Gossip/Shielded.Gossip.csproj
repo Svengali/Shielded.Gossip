@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Shielded" Version="4.4.8" />
+    <ProjectReference Include="..\..\Shielded\Shielded\Shielded.csproj" />
   </ItemGroup>
 
 </Project>

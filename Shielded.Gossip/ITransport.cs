@@ -26,7 +26,8 @@ namespace Shielded.Gossip
         /// <summary>
         /// Gets a collection of all other servers participating in the cluster.
         /// </summary>
-        ICollection<string> Servers { get; }
+        IEnumerable<string> Servers { get; }
+        int ServerCount { get; }
 
         /// <summary>
         /// Sends a message to all servers. Fire and forget, should not throw.

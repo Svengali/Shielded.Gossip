@@ -202,7 +202,7 @@ namespace Shielded.Gossip
                     string server;
                     do
                     {
-                        server = servers.Skip(rand.Next(servers.Count)).First();
+                        server = servers.Skip(rand.Next(Transport.ServerCount)).First();
                     }
                     while (!StartGossip(server) && --limit >= 0);
                 });

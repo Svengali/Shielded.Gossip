@@ -44,7 +44,10 @@ namespace Shielded.Gossip
         /// as immutable! Create a new IPEndPoint if you wish to change the address of a server.
         /// </summary>
         public readonly ShieldedDict<string, IPEndPoint> ServerIPs;
-        public ICollection<string> Servers => ServerIPs.Keys;
+        public IEnumerable<string> Servers => ServerIPs.Keys;
+
+        public int ServerCount => ServerIPs.Count;
+
 
         /// <summary>
         /// Timeout in milliseconds for detecting a half-open connection. Default is 30 seconds.
